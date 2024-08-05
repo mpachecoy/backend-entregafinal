@@ -12,11 +12,10 @@ export const checkProductData = async (req, res, next) => {
             status
         }
 
-        //Verifico que el producto tenga todas las propiedades.
         if(Object.values(newProduct).includes(undefined)) {
             return res.status(400).json({ status: "error", msg: "Todos los campos son obligatorios"});
         }
-        next(); //Permite que continue la ejecucion del endpoint
+        next(); 
 
     } catch (error) {
         console.log(error);

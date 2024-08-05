@@ -72,8 +72,8 @@ router.post("/", checkProductData, async (req, res) =>{
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: "error", msg: "Error interno del servidor"});
-    }
-})
+    };
+});
 
 router.delete("/:pid", async (req, res) =>{
     try {
@@ -86,7 +86,7 @@ router.delete("/:pid", async (req, res) =>{
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: "error", msg: "Error interno del servidor"});
-    }
-})
+    };
+});
 
 export default router;

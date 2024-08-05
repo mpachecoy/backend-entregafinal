@@ -7,12 +7,11 @@ import router from "./router/index.router.js";
 const app = express();
 connectMongoDB();
 
-app.use(express.json()); //Este middleware nos permite leer archivos json con express.
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.use("/api", router);
-
 
 app.listen(envs.PORT, () =>{
     console.log(`Escuchando en el puerto ${envs.PORT}`);
