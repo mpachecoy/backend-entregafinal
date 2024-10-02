@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 import mongoosePaginate from "mongoose-paginate-v2";
 
-const productCollection = "products"; //Nombre de la colecion
+const productCollection = "products";
 
-//Modelo de Schema
 const productSchema = new mongoose.Schema({
     title:{
         type: String,

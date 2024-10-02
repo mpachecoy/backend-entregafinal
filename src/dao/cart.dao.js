@@ -23,7 +23,7 @@ const addProductToCart = async (cid, pid) => {
             { _id: cid }, 
             { $push: { products: { product: pid, quantity: 1} }}
         );
-    }
+    };
     const cart = await cartModel.findById(cid)
     return cart;
 };

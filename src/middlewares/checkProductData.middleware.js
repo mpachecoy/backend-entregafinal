@@ -10,11 +10,11 @@ export const checkProductData = async (req, res, next) => {
             stock, 
             category, 
             status
-        }
+        };
 
         if(Object.values(newProduct).includes(undefined)) {
             return res.status(400).json({ status: "error", msg: "Todos los campos son obligatorios"});
-        }
+        };
         next(); 
 
     } catch (error) {

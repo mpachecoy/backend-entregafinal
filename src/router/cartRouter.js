@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: "error", msg: "Error interno del servidor"});
-    }
+    };
 });
 
 router.get("/:cid", async (req, res) => {
@@ -25,7 +25,7 @@ router.get("/:cid", async (req, res) => {
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: "error", msg: "Error interno del servidor"});
-    }
+    };
 });
 
 router.post("/:cid/product/:pid", checkProductAndCart, async (req, res) => {
@@ -38,7 +38,7 @@ router.post("/:cid/product/:pid", checkProductAndCart, async (req, res) => {
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: "error", msg: "Error interno del servidor"});
-    }
+    };
 });
 
 router.delete("/:cid/product/:pid", checkProductAndCart, async (req, res) =>{
@@ -50,7 +50,7 @@ router.delete("/:cid/product/:pid", checkProductAndCart, async (req, res) =>{
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: "error", msg: "Error interno del servidor"});
-    }
+    };
 });
 
 router.put("/:cid/product/:pid", checkProductAndCart, async (req, res, quantity) =>{
@@ -63,7 +63,7 @@ router.put("/:cid/product/:pid", checkProductAndCart, async (req, res, quantity)
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: "error", msg: "Error interno del servidor"});
-    }
+    };
 });
 
 router.delete("/:cid", async (req, res) =>{
@@ -78,7 +78,7 @@ router.delete("/:cid", async (req, res) =>{
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: "error", msg: "Error interno del servidor"});
-    }
+    };
 });
 
 

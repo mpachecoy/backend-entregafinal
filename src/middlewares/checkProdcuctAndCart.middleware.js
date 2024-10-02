@@ -16,6 +16,5 @@ export const checkProductAndCart = async (req = request, res = response, next) =
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: "error", msg: " Error interno del servidor "});
-    }
-
+    };
 }
